@@ -6,128 +6,128 @@
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	
-	<script type="text/javascript">
+	// <script type="text/javascript">
 
-		function pirateCars(){
-			var arr = ["Lambo", "Ferrari","Tesla","Porsche"];
-			var arg = ["Blackbeard", "Redbeard", "Captain Hook", "Ahab", "Peleg"];
-			var pirateCar = [arr, arg];
-			for(var i =0; i < pirateCar.length; i++){
+	// 	function pirateCars(){
+	// 		var arr = ["Lambo", "Ferrari","Tesla","Porsche"];
+	// 		var arg = ["Blackbeard", "Redbeard", "Captain Hook", "Ahab", "Peleg"];
+	// 		var pirateCar = [arr, arg];
+	// 		for(var i =0; i < pirateCar.length; i++){
 				
-				console.log(pirateCar[i]);
+	// 			console.log(pirateCar[i]);
 				
-				for(var x = 0; x < arr.length || x < arg.length; x++){
-					console.log(arr[x]);
-					console.log(arg[x]);
-				}
+	// 			for(var x = 0; x < arr.length || x < arg.length; x++){
+	// 				console.log(arr[x]);
+	// 				console.log(arg[x]);
+	// 			}
 
-			}
-		}
+	// 		}
+	// 	}
 
-		function ninetyNineBottles(){
-			// for (i=100; i>0; i--)
-			var i = 100;
-			while(i >= 0)
-			{
+	// 	function ninetyNineBottles(){
+	// 		// for (i=100; i>0; i--)
+	// 		var i = 100;
+	// 		while(i >= 0)
+	// 		{
 
-				var bottles = i + " Bottles of beer on the wall," + i + " bottles of beer. Take one down and pass it around" + i + " bottles of beer...";
-				console.log(bottles);
-				i--;
-			}
-		}
+	// 			var bottles = i + " Bottles of beer on the wall," + i + " bottles of beer. Take one down and pass it around" + i + " bottles of beer...";
+	// 			console.log(bottles);
+	// 			i--;
+	// 		}
+	// 	}
 		
-		//Variable scope
-		function scopes(){
-			var z = 3;
-			function inner(){
-				var z = 5;
-				console.log(z);
-			}
-			var z = 15;
-			console.log(z);
-			function global(){
-				z = 35;
-				console.log(z);
-			}
-			console.log(z);
-		}
+	// 	//Variable scope
+	// 	function scopes(){
+	// 		var z = 3;
+	// 		function inner(){
+	// 			var z = 5;
+	// 			console.log(z);
+	// 		}
+	// 		var z = 15;
+	// 		console.log(z);
+	// 		function global(){
+	// 			z = 35;
+	// 			console.log(z);
+	// 		}
+	// 		console.log(z);
+	// 	}
 
-		// var kalamazoo = "hannah";
-		var kalamazoo = "gohangasalamiimalasagnahog";
+	// 	// var kalamazoo = "hannah";
+	// 	var kalamazoo = "gohangasalamiimalasagnahog";
 
-		function palindrome(pal){
+	// 	function palindrome(pal){
 			
-			if(pal === pal.split("").reverse().join("")){
-				console.log(pal);
-				return pal;
-			}
-			else {
-				console.log("This string is not an even numbered in length, and probably not a palindrome.");
-				return null;
-			}
-		}
+	// 		if(pal === pal.split("").reverse().join("")){
+	// 			console.log(pal);
+	// 			return pal;
+	// 		}
+	// 		else {
+	// 			console.log("This string is not an even numbered in length, and probably not a palindrome.");
+	// 			return null;
+	// 		}
+	// 	}
 
-		palindrome(kalamazoo);
+	// 	palindrome(kalamazoo);
 
 		
-		function palindromeTwo(string) {
-			var palTwo = string; 
-			var temp = [];
-			var len = palTwo.length;
-			var reverse = "";
+	// 	function palindromeTwo(string) {
+	// 		var palTwo = string; 
+	// 		var temp = [];
+	// 		var len = palTwo.length;
+	// 		var reverse = "";
 			
-			if(len % 2 == 0){
-				var front = palTwo.substring(0, len / 2);
-				//cut string in half and store front
-				console.log("front   :", front, typeof(front));
+	// 		if(len % 2 == 0){
+	// 			var front = palTwo.substring(0, len / 2);
+	// 			//cut string in half and store front
+	// 			console.log("front   :", front, typeof(front));
 
-				//loop through front and reverse it
-				for(var i = front.length - 1 ; i >= 0; i--){
-					console.log("front[i]:", front[i], typeof(front));
+	// 			//loop through front and reverse it
+	// 			for(var i = front.length - 1 ; i >= 0; i--){
+	// 				console.log("front[i]:", front[i], typeof(front));
 					
-					//store the reversed letters of front in temp as seperate elements of an array
-					temp.push(front[i]);
-					console.log("temp    :",temp); 
-				}
+	// 				//store the reversed letters of front in temp as seperate elements of an array
+	// 				temp.push(front[i]);
+	// 				console.log("temp    :",temp); 
+	// 			}
 
-				reverse = temp.join("");
-				console.log(reverse);
-				//check if front, when reversed forms original string
-				if(palTwo == front + reverse){
-					console.log("You have entered a palindrome!");
-				}
+	// 			reverse = temp.join("");
+	// 			console.log(reverse);
+	// 			//check if front, when reversed forms original string
+	// 			if(palTwo == front + reverse){
+	// 				console.log("You have entered a palindrome!");
+	// 			}
 			
-			}
-			else {
-				console.log("This string is not an even numbered in length, and probably not a palindrome.");
-				return null;
-			}
-		}
+	// 		}
+	// 		else {
+	// 			console.log("This string is not an even numbered in length, and probably not a palindrome.");
+	// 			return null;
+	// 		}
+	// 	}
 		
-		function hasVowels(string){
-			var a = [];
-			a = string.split("");
-			var voweled = false;
-			console.log(a, typeof(a));
-			var vowels = ["a","e","i","o","u"];
-			//Loop through given string.
-			for(var i = 0; i < a.length; i++){
-				// loop through vowels in array.
-				for(var x = 0; x < vowels.length; x++){
-					//check for match
-					if(a[i] == vowels[x] ){
-						voweled = true;
-						break;
-					}
-				}
-			}
-			if(voweled){
-				console.log("Ahoy matie, there be some vowels aboard that vessel.");
-			}
-			else{
-				console.log("Ain't no vowels here.");
-			}
-		}
+		// function hasVowels(string){
+		// 	var a = [];
+		// 	a = string.split("");
+		// 	var voweled = false;
+		// 	console.log(a, typeof(a));
+		// 	var vowels = ["a","e","i","o","u"];
+		// 	//Loop through given string.
+		// 	for(var i = 0; i < a.length; i++){
+		// 		// loop through vowels in array.
+		// 		for(var x = 0; x < vowels.length; x++){
+		// 			//check for match
+		// 			if(a[i] == vowels[x] ){
+		// 				voweled = true;
+		// 				break;
+		// 			}
+		// 		}
+		// 	}
+		// 	if(voweled){
+		// 		console.log("Ahoy matie, there be some vowels aboard that vessel.");
+		// 	}
+		// 	else{
+		// 		console.log("Ain't no vowels here.");
+		// 	}
+		// }
 	</script>
 	<form>
 		<input type="text" id="bamboo" placeholder="Type your name.">
@@ -141,13 +141,13 @@
 	</form>
 
 	<script type="text/javascript">
-		function yourName() {
-			var name = document.getElementById("bamboo").value;
-			alert(name);
-		}
+		// function yourName() {
+		// 	var name = document.getElementById("bamboo").value;
+		// 	alert(name);
+		// }
 		
 		
-		
+		//Can this be done in JS without jQuery? Is this the best way to do the problem?
 		$("#but").on("click", checkDate);
 
 		function checkDate(event){
@@ -167,27 +167,27 @@
 			}	
 		}
 
-		nums = [1,1,1,2,2,5,6,7,8,8,8,8,8,3,9];
-		function popular(){
-			var temp = [];
-			var numbs = nums.sort();
-			temp = numbs;
-			var counter = 0;
-			var popular = 0;
-			var coolio = [];
-			for(var i = 0; i < numbs.length; i++){
-				for(var x = 0; x < temp.length; x++){
-					if(numbs[i] === temp[x]){
-						counter++;
-						if(counter > popular){
-							popular = counter;
-							coolio = coolio.push(numbs[i]);//Uncaught TypeError: coolio.push is not a function
-						}
-					}
-				}
-			}
-			console.log(coolio[coolio.length]);
-		}
+		// nums = [1,1,1,2,2,5,6,7,8,8,8,8,8,3,9];
+		// function popular(){
+		// 	var temp = [];
+		// 	var numbs = nums.sort();
+		// 	temp = numbs;
+		// 	var counter = 0;
+		// 	var popular = 0;
+		// 	var coolio = [];
+		// 	for(var i = 0; i < numbs.length; i++){
+		// 		for(var x = 0; x < temp.length; x++){
+		// 			if(numbs[i] === temp[x]){
+		// 				counter++;
+		// 				if(counter > popular){
+		// 					popular = counter;
+		// 					coolio = coolio.push(numbs[i]);//Uncaught TypeError: coolio.push is not a function
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// 	console.log(coolio[coolio.length]);
+		// }
 
 	</script>
 </body>
