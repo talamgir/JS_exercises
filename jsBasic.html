@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> $(document).ready(function(){});</script>
+
+	<script type="text/javascript">
+		function partOne(){
+			var abc = 123;
+			var def = 456;
+			var total = abc + def;
+			console.log(total);
+		}
+
+		function stringy(){
+			var abc = "abc";
+			var def = "def";
+			alert(abc + def);
+		}
+
+		function cars(){
+			var lamborghini = ["hurrican","gallardo"];
+			var ferrari = ["f430", "enzo"];
+			var cars = [lamborghini,ferrari];
+			console.log(
+				//should output gallardo
+				cars[0][1]);
+			//should print enzo
+			console.log(cars[1][1]);
+		}
+
+		function lessThanTen(number){
+			var num = number;
+			if(num < 10){
+				alert("Hey stinky, your number is less than 10!");
+			}
+			else{
+				alert("Your number was " + num + "! And is greater than Ten!");
+			}
+		}
+		function checkString(string){
+
+			var spiritInTheSky  = string;
+
+			if(spiritInTheSky = "Spirit in the Sky"){
+				return true;
+			}
+			return false;
+		}
+		function checkName(name){
+			var name = name;
+			alert(name);
+		}
+		function printer(){
+			console.log("Words, blah.?");
+		}
+	</script>
+	
+	<h1>Elements</h1>
+	<p class ="firstRow" id="Hydrogen">Hydrogen</p>
+	<p class ="firstRow" id="Helium">Helium</p>
+	<p class="secondRow" id="Lithium">Lithium</p>
+	<p class="secondRow" id="Beryllium">Beryllium</p>
+	<p class="secondRow" id="Boron">Boron</p>
+	<p class="secondRow" id="Carbon">Carbon</p>
+	<p class="secondRow" id="Nitrogen">Nitrogen</p>
+	<p class="secondRow" id="Oxygen">Oxygen</p>
+	<p class="secondRow" id="Fluorine">Fluorine</p>
+	<p class="secondRow" id="Neon">Neon</p>
+
+	<button id="firstShow">Show First Row</button>
+
+	<button id="firstHide"> Hide First Row</button>
+
+	<button id="secondShow" onclick="showSecond()">Show Second Row</button>
+
+	<button id="secondHide" onclick="hideSecond()">Hide Second Row</button>
+
+	<script type="text/javascript">
+		$("#firstHide").click(function (){
+			$(".firstRow").hide()});
+
+		$("#firstShow").click(function (){
+			$(".firstRow").show()});
+		
+		
+		function showSecond(){
+			$(".secondRow").show();
+		}
+		function hideSecond(){
+			$(".secondRow").hide();
+		}
+		
+		//testing js advance palindrome
+		
+	</script>
+</body>
+</html>
