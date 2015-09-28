@@ -71,28 +71,32 @@
 
 		
 		function palindromeTwo(string) {
-
 			var palTwo = string; 
+			var temp = [];
+			var len = palTwo.length;
+			var reverse = "";
 			
-			 var len = palTwo.length;
-
 			if(len % 2 == 0){
 				var front = palTwo.substring(0, len / 2);
 				//cut string in half and store front
-				console.log(front, typeof(front));
+				console.log("front   :", front, typeof(front));
 
 				//loop through front and reverse it
 				for(var i = front.length - 1 ; i >= 0; i--){
-					console.log(front[i], typeof(front));
-					var temp = [];
-					temp = temp.push(front[i]);
-					console.log(temp); // Prints 1 .... No idea why. Should print contents of array.
-
-					//check if front, when reversed forms original string
-					// if(pal == front + reverse){
-					// 	console.log("You have entered a palindrome!");
-					// }
+					console.log("front[i]:", front[i], typeof(front));
+					
+					//store the reversed letters of front in temp as seperate elements of an array
+					temp.push(front[i]);
+					console.log("temp    :",temp); 
 				}
+
+				reverse = temp.join("");
+				console.log(reverse);
+				//check if front, when reversed forms original string
+				if(palTwo == front + reverse){
+					console.log("You have entered a palindrome!");
+				}
+			
 			}
 			else {
 				console.log("This string is not an even numbered in length, and probably not a palindrome.");
@@ -105,7 +109,7 @@
 			a = string.split("");
 			var voweled = false;
 			console.log(a, typeof(a));
-			var vowels = ["a","e","i","o","u","y"];
+			var vowels = ["a","e","i","o","u"];
 			//Loop through given string.
 			for(var i = 0; i < a.length; i++){
 				// loop through vowels in array.
@@ -135,6 +139,7 @@
 		<br>
 		<p> 01/34/6789</p>
 	</form>
+
 	<script type="text/javascript">
 		function yourName() {
 			var name = document.getElementById("bamboo").value;

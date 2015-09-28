@@ -1,35 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Ten Simple Javascript Exercises</title>
 </head>
 <body>
 	<script type="text/javascript">
+		function max(x,y){
+			if(x > y){
+				return x;
+			}
+			else{
+				return y;
+			}
+		}
 
-			function maxOfThree(apple, banana, carrot){
-				if(banana > apple && banana > carrot){
-					return banana;
+		function maxOfThree(apple, banana, carrot){
+			if(banana > apple && banana > carrot){
+				return banana;
+			}
+			else if(apple > banana && apple > carrot){
+				return apple;
+			}
+			else {
+				return carrot;
+			}
+
+		}
+		console.log(maxOfThree(1,2,3));//expects 3
+		console.log(maxOfThree(15,7,6));// expects 15
+		console.log(maxOfThree(1,6,4));//expects 6
+
+		function maxOfThreeTwo(apple, banana, carrot) {
+			var store = [apple, banana, carrot];
+			store = store.sort();
+			return store[store.length - 1];
+		} 
+		console.log(maxOfThreeTwo(1,2,3));//expects 3
+		console.log(maxOfThreeTwo(15,7,6));// expects 15
+		console.log(maxOfThreeTwo(1,6,4));//expects 6
+
+		function hasVowels(string){
+			var a = [];
+			a = string.split("");
+			var voweled = false;
+			console.log(a, typeof(a));
+			var vowels = ["a","e","i","o","u"];
+			//Loop through given string.
+			for(var i = 0; i < a.length; i++){
+				// loop through vowels in array.
+				for(var x = 0; x < vowels.length; x++){
+					//check for match
+					if(a[i] == vowels[x] ){
+						voweled = true;
+						break;
+					}
 				}
-				else if(apple > banana && apple > carrot){
-					return apple;
-				}
-				else {
-					return carrot;
-				}
+			}
+			if(voweled){
+				console.log("Ahoy matie, there be some vowels aboard that vessel.");
+				return voweled;
+			}
+			else{
+				console.log("Ain't no vowels here.");
+				return voweled;
+			}
+		}
+		function translate(s){
+
+		}
+		function sum(s){
+			var count = 0;
+			for (var i = 0; i < s.length; i++){
+				count = count + s[i];
 
 			}
-			console.log(maxOfThree(1,2,3));//expects 3
-			console.log(maxOfThree(15,7,6));// expects 15
-			console.log(maxOfThree(1,6,4));//expects 6
-
-			function maxOfThreeTwo(apple, banana, carrot) {
-				var store = [apple, banana, carrot];
-				store = store.sort();
-				return store[store.length - 1];
-			} 
-			console.log(maxOfThreeTwo(1,2,3));//expects 3
-			console.log(maxOfThreeTwo(15,7,6));// expects 15
-			console.log(maxOfThreeTwo(1,6,4));//expects 6
+			return count;
+		}
+		function multiply(m){
+			var count = 0;
+			for(var i = 0; i < m.length; m++){
+				count = count * m[i];
+			}
+		}
 	</script>
 
 </body>
