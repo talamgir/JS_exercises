@@ -29,10 +29,13 @@
 		console.log(maxOfThree(1,2,3));//expects 3
 		console.log(maxOfThree(15,7,6));// expects 15
 		console.log(maxOfThree(1,6,4));//expects 6
-
+		//Borrowed from aks stackoverflow
+		function sortNumber(a,b) {
+    		return a - b;
+		}
 		function maxOfThreeTwo(apple, banana, carrot) {
 			var store = [apple, banana, carrot];
-			store = store.sort();
+			store = store.sort(sortNumber);
 			return store[store.length - 1];
 		} 
 		console.log(maxOfThreeTwo(1,2,3));//expects 3
